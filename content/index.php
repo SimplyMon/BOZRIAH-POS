@@ -14,7 +14,6 @@ if (!isset($_SESSION['user'])) {
 <html lang="en">
 
 
-<!-- TEST -->
 
 <head>
   <meta charset="UTF-8" />
