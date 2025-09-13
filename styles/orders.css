@@ -1,0 +1,516 @@
+/* order tablwe */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  text-align: center;
+}
+
+th {
+  background-color: #f48734;
+  color: white;
+}
+
+tr {
+  background-color: #eee;
+}
+
+.orders-table tr {
+  background-color: #fff;
+}
+.orders-table {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Header container for title and search bar */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  color: #888;
+  font-weight: bold;
+}
+
+.clear-btn:hover {
+  color: #f48734;
+}
+
+input[type="text"] {
+  padding: 10px 30px 10px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+#invoiceSearch:focus {
+  border-color: #f48734;
+  box-shadow: 0 0 5px rgba(244, 135, 52, 0.5);
+}
+
+.order-row {
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.order-row:hover {
+  background-color: #eee;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 50%;
+  margin: 0% auto;
+  border-radius: 5px;
+}
+
+.close-btn {
+  float: right;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+}
+.close-btn:hover {
+  color: #f48734;
+}
+
+/* order summary max-height */
+.table-container {
+  overflow-y: auto;
+  border: 1px solid #ddd;
+}
+
+.table-container table {
+  width: 100%;
+}
+
+.table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #f48734;
+  border-radius: 5px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #d36a20;
+}
+
+/* Scrollbar for Firefox */
+.table-container {
+  scrollbar-color: #f48734 #f1f1f1;
+  scrollbar-width: thin;
+}
+
+/* Table Alignments */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.right-align {
+  text-align: right;
+}
+
+/* Summary Section */
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.summary-button-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.summary-button {
+  background-color: #f48734;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.summary-button:hover {
+  background-color: #d36a20;
+}
+
+.discount-btn {
+  background-color: none;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.discount-btn:hover {
+  background-color: #ccc;
+}
+
+/* refresh butt */
+.refresh-button {
+  background-color: #f48734;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.refresh-button:hover {
+  background-color: #d9732b;
+}
+
+/* Background Overlay */
+.payment-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+#gcashFields input,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+select {
+  cursor: pointer;
+  font: bold;
+}
+
+/* Payment Modal Styles */
+.payment-modal {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1001;
+}
+
+.payment-modal-content {
+  position: relative;
+}
+
+.payment-modal .close-payment-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-payment-btn {
+  float: right;
+  cursor: pointer;
+  font-size: 30px;
+}
+.close-payment-btn:hover {
+  color: #f48734;
+}
+
+.payment-modal h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #333;
+}
+
+.payment-modal label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.payment-modal input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: right;
+}
+
+.payment-modal input[readonly] {
+  background: #f9f9f9;
+  font-weight: bold;
+}
+
+.payment-modal #changeAmount {
+  font-weight: bold;
+  color: green;
+}
+
+.payment-modal #confirmPaymentBtn {
+  width: 100%;
+  padding: 12px;
+  background: #f48734;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.payment-modal #confirmPaymentBtn:hover {
+  background: #d36a20;
+}
+
+.payment-buttons {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.payment-method-btn,
+#otherPaymentBtn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f48734;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.payment-method-btn:hover,
+#otherPaymentBtn:hover {
+  background-color: #d36a20;
+}
+
+#otherPaymentMethods {
+  margin-top: 10px;
+}
+
+/* Darker background when payment modal is open */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+#errorModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 130px;
+  width: 300px;
+  background: #ff4d4d;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  text-align: center;
+}
+
+#errorModal .modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff4d4d;
+  color: white;
+}
+
+#errorModal .error-message {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#errorModal .close-error-btn {
+  position: absolute;
+  top: -10px;
+  right: -50px;
+  color: white;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+}
+#errorModal .close-error-btn:hover {
+  color: black;
+}
+
+.success-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+.success-modal-content {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.success-modal-content img {
+  height: 350px;
+  width: auto;
+}
+#closeSuccessModal {
+  margin-top: 10px;
+  padding: 14px 26px;
+  border-radius: 16px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+#closeSuccessModal:hover {
+  background: #50a753;
+}
+
+/* DISCOUNT MODAL */
+
+.modal-content {
+  position: relative;
+}
+
+.close-discount-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-discount-btn:hover,
+.close-discount-btn:focus {
+  color: #d9732b;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.action-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.action-btn:hover {
+  background-color: #45a049;
+}
+
+/* remove btn */
+
+.remove-discount-btn {
+  border: none;
+  color: white;
+  background-color: #f48734;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 6px;
+  padding: 4px 10px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.remove-discount-btn:hover {
+  background-color: #d9732b;
+}
+
+.remove-discount-btn:focus {
+  outline: 2px solid #d9732b;
+  outline-offset: 2px;
+}

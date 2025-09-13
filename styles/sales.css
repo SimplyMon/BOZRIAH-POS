@@ -1,0 +1,108 @@
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  font-family: sans-serif;
+}
+
+.sales-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.sales-header form p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.sales-header input[type="date"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.sales-header button[type="submit"] {
+  background-color: #f48734;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sales-header button[type="submit"]:hover {
+  background-color: #d9702c;
+}
+
+.label {
+  font-weight: bold;
+  color: #333333;
+}
+
+.value {
+  color: #333333;
+}
+
+hr {
+  border-top: 1px solid #bbb;
+  margin: 10px 0;
+}
+
+h3 {
+  color: #337ab7;
+  margin-bottom: 5px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.discount-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.payment-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.total {
+  font-weight: bold;
+  color: #333333;
+}
+
+.btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-group button {
+  background-color: #f48734;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.btn-group button:hover {
+  background-color: #d9702c;
+}
+
+.btn-group button:last-child {
+  margin-right: 0;
+}
