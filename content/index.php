@@ -12,7 +12,7 @@ if (!isset($_SESSION['user'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-<!-- TEST -->
+
 
 <head>
   <meta charset="UTF-8" />
